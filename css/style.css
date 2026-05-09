@@ -1,0 +1,248 @@
+:root {
+  --black: #161212;
+  --beige: #C6BEB5;
+  --light: #FAFAF8;
+  --soft-gray: #D5D2CB;
+  --camel: #9C8D7C;
+  --dark: #191A1E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--light);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(250,250,248,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hero {
+  height: 100vh;
+  background: url('../assets/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.25);
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.btn,
+.btn-outline {
+  padding: 14px 32px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn {
+  background: white;
+  color: var(--black);
+}
+
+.btn-outline {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.brand-section,
+.newsletter,
+.experience-login {
+  padding: 120px 0;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.brand-grid img {
+  width: 100%;
+}
+
+.subtitle {
+  letter-spacing: 4px;
+  color: var(--camel);
+}
+
+.brand-text h2 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.brand-text p {
+  max-width: 500px;
+}
+
+.newsletter {
+  background: var(--soft-gray);
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#newsletter-form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#newsletter-form input {
+  padding: 15px;
+  width: 320px;
+  border: none;
+}
+
+#newsletter-form button {
+  padding: 15px 25px;
+  border: none;
+  background: var(--black);
+  color: white;
+  cursor: pointer;
+}
+
+.experience-box {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+footer {
+  background: var(--black);
+  color: white;
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+@media(max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: var(--light);
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .brand-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #newsletter-form input {
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
