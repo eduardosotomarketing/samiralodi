@@ -313,22 +313,32 @@ footer {
 .about-hero {
   height: 90vh;
 
-  background-image: url('../assets/about-hero.webp');
+  background-image: url('/assets/about-hero2.webp');
   background-size: cover;
-  background-position: center;
+
+  /* BAJA LA IMAGEN */
+  background-position: center 1%;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  /* MUEVE EL CONTENIDO A LA DERECHA */
+  justify-content: flex-end;
 
   position: relative;
+
+  padding-right: 120px;
 }
 
 .about-overlay {
   background: rgba(0,0,0,0.20);
   padding: 60px;
   color: white;
-  text-align: center;
+
+  /* TEXTO A LA DERECHA */
+  text-align: left;
+
+  max-width: 650px;
 }
 
 .about-overlay h1 {
