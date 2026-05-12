@@ -12,24 +12,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/coleccion.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  
 </head>
-
-<script>
-
-function changeImage(element){
-
-  document.getElementById('main-image').src = element.src;
-
-  document.querySelectorAll('.thumbnail-gallery img')
-    .forEach(img => img.classList.remove('active-thumb'));
-
-  element.classList.add('active-thumb');
-}
-
-</script>
 
 <body>
 
@@ -77,42 +62,11 @@ function changeImage(element){
 
     <div class="product-grid">
 
-      <div class="product-gallery">
+      <div class="product-image">
 
-  <div class="main-product-image">
+        <img src="./assets/remera1.webp" alt="Remera Samira Lodi">
 
-    <img
-      id="main-image"
-      src="./assets/remera-main.webp"
-      alt="Remera Samira Lodi"
-    >
-
-  </div>
-
-  <div class="thumbnail-gallery">
-
-    <img
-      src="./assets/remera-main.webp"
-      alt="Vista principal"
-      onclick="changeImage(this)"
-      class="active-thumb"
-    >
-
-    <img
-      src="./assets/remera-fold.webp"
-      alt="Prenda doblada"
-      onclick="changeImage(this)"
-    >
-
-    <img
-      src="./assets/remera-detail.webp"
-      alt="Detalle tela"
-      onclick="changeImage(this)"
-    >
-
-  </div>
-
-</div>
+      </div>
 
       <div class="product-info">
 

@@ -73,7 +73,7 @@ nav a:hover {
 
 .hero {
   height: 100vh;
-  background-image: url('../assets/hero.webp');
+  background-image: url('../assets/about-hero2.webp');
 
   /* CAMBIO IMPORTANTE */
   background-position: center 5%;
@@ -313,7 +313,7 @@ footer {
 .about-hero {
   height: 90vh;
 
-  background-image: url('/assets/about-hero2.webp');
+  background-image: url('../assets/about-hero2.webp');
   background-size: cover;
 
   /* BAJA LA IMAGEN */
