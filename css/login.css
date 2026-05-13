@@ -181,8 +181,28 @@ nav a:hover {
 }
 
 .subtitle {
-  letter-spacing: 4px;
-  color: var(--camel);
+
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: rgba(255,255,255,0.92);
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  font-size: 0.78rem;
+
+  font-weight: 400;
 }
 
 .brand-text h2 {
@@ -325,12 +345,12 @@ footer {
 }
 
 
-/* COLECCIÓN */
+/* LOGIN HERO */
 
-.collection-hero {
-  height: 75vh;
+.login-hero {
+  height: 65vh;
 
-  background-image: url('/assets/collection-hero.webp');
+  background-image: url('../assets/login-hero.webp');
 
   background-size: cover;
   background-position: center;
@@ -340,17 +360,17 @@ footer {
   justify-content: center;
 }
 
-.collection-overlay {
+.login-overlay {
   background: rgba(0,0,0,0.18);
 
   padding: 60px;
 
-  color: white;
-
   text-align: center;
+
+  color: white;
 }
 
-.collection-overlay h1 {
+.login-overlay h1 {
   font-size: 3rem;
 
   font-weight: 300;
@@ -360,32 +380,15 @@ footer {
   margin-top: 20px;
 }
 
-.collection-intro {
-  padding: 120px 0 80px;
+/* LOGIN SECTION */
+
+.login-section {
+  padding: 140px 0;
 }
 
-.collection-text {
-  max-width: 850px;
-
-  margin: auto;
-
-  text-align: center;
-}
-
-.collection-text h2 {
-  font-size: 2.5rem;
-
-  font-weight: 300;
-
-  margin-bottom: 25px;
-}
-
-.product-section {
-  padding: 80px 0 140px;
-}
-
-.product-grid {
+.login-grid {
   display: grid;
+
   grid-template-columns: repeat(2,1fr);
 
   gap: 100px;
@@ -393,140 +396,7 @@ footer {
   align-items: center;
 }
 
-/* GALERÍA PRODUCTO */
-
-.product-gallery {
-  width: 100%;
-}
-
-.main-product-image img {
-  width: 100%;
-
-  height: 850px;
-
-  object-fit: cover;
-
-  transition: 0.3s;
-}
-
-.thumbnail-gallery {
-  display: flex;
-
-  gap: 15px;
-
-  margin-top: 20px;
-}
-
-.thumbnail-gallery img {
-  width: 110px;
-
-  height: 140px;
-
-  object-fit: cover;
-
-  cursor: pointer;
-
-  opacity: 0.7;
-
-  transition: 0.3s;
-
-  border: 1px solid transparent;
-}
-
-.thumbnail-gallery img:hover {
-  opacity: 1;
-}
-
-.thumbnail-gallery img.active-thumb {
-  opacity: 1;
-
-  border: 1px solid var(--black);
-}
-
-.product-info h2 {
-  font-size: 2.7rem;
-
-  font-weight: 300;
-
-  margin: 20px 0;
-}
-
-.product-description {
-  max-width: 500px;
-
-  margin-bottom: 35px;
-}
-
-.product-details {
-  display: flex;
-  flex-direction: column;
-
-  gap: 12px;
-
-  margin-bottom: 35px;
-}
-
-.product-price {
-  font-size: 1.5rem;
-
-  margin-bottom: 35px;
-
-  letter-spacing: 2px;
-}
-
-.size-selector {
-  margin-bottom: 35px;
-}
-
-.size-selector label {
-  display: block;
-
-  margin-bottom: 10px;
-}
-
-.size-selector select {
-  width: 180px;
-
-  padding: 15px;
-
-  border: 1px solid #d9d9d9;
-
-  background: transparent;
-
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.product-btn {
-  display: inline-block;
-
-  margin-top: 10px;
-}
-
-.purchase-note {
-  margin-top: 25px;
-
-  max-width: 400px;
-
-  font-size: 0.95rem;
-
-  opacity: 0.7;
-}
-
-.future-section {
-  padding: 140px 0;
-
-  background: var(--soft-gray);
-}
-
-.future-box {
-  max-width: 850px;
-
-  margin: auto;
-
-  text-align: center;
-}
-
-.future-box h2 {
+.login-info h2 {
   font-size: 2.5rem;
 
   font-weight: 300;
@@ -534,53 +404,150 @@ footer {
   margin: 20px 0;
 }
 
-.future-box p {
+.login-info p {
+  max-width: 500px;
+}
+
+.login-benefits {
+  margin-top: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+/* FORM */
+
+.login-form-box {
+  background: white;
+
+  padding: 60px;
+
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.login-form h3 {
+  font-size: 2rem;
+
+  font-weight: 300;
+
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+
+  padding: 18px;
+
+  border: 1px solid #d9d9d9;
+
+  background: transparent;
+
+  font-family: 'Josefin Sans', sans-serif;
+
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+
+  border-color: var(--camel);
+}
+
+.login-btn {
+  width: 100%;
+
+  border: none;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+.login-note {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 0.9rem;
+
+  opacity: 0.7;
+}
+
+/* EXTRA SECTION */
+
+.login-extra {
+  padding: 140px 0;
+
+  background: var(--soft-gray);
+}
+
+.extra-box {
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.extra-box h2 {
+  font-size: 2.5rem;
+
+  font-weight: 300;
+
+  margin: 20px 0;
+}
+
+.extra-box p {
   max-width: 650px;
 
   margin: auto;
 }
 
+/* MOBILE */
+
 @media(max-width: 768px) {
 
-  .collection-overlay {
+  .login-overlay {
     padding: 30px;
   }
 
-  .collection-overlay h1 {
+  .login-overlay h1 {
     font-size: 2rem;
   }
 
-  .collection-text h2,
-  .product-info h2,
-  .future-box h2 {
-    font-size: 2rem;
-  }
-
-  .product-grid {
+  .login-grid {
     grid-template-columns: 1fr;
 
-    gap: 60px;
+    gap: 70px;
   }
 
-  .product-image img {
-    height: 550px;
+  .login-info h2,
+  .extra-box h2 {
+    font-size: 2rem;
   }
 
-  .future-section,
-  .product-section {
+  .login-form-box {
+    padding: 40px 30px;
+  }
+
+  .login-section,
+  .login-extra {
     padding: 100px 0;
   }
 
-  .main-product-image img {
-  height: 550px;
-}
-
-.thumbnail-gallery {
-  justify-content: center;
-}
-
-.thumbnail-gallery img {
-  width: 85px;
-  height: 110px;
-}
 }
