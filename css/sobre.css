@@ -1,313 +1,3 @@
-:root {
-  --black: #161212;
-  --beige: #C6BEB5;
-  --light: #FAFAF8;
-  --soft-gray: #D5D2CB;
-  --camel: #9C8D7C;
-  --dark: #191A1E;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Josefin Sans', sans-serif;
-  background: var(--light);
-  color: var(--black);
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(250,250,248,0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 0;
-}
-
-.logo {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 1.4rem;
-  letter-spacing: 4px;
-}
-
-nav {
-  display: flex;
-  gap: 35px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--black);
-  font-size: 0.95rem;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  opacity: 0.6;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.hero {
-  height: 100vh;
-  background-image: url('../assets/about-hero2.webp');
-
-  /* CAMBIO IMPORTANTE */
-  background-position: center 5%;
-
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-
-  padding-top: 120px;
-}
-
-/* Imagen mobile */
-@media(max-width: 768px) {
-
-  .hero {
-    min-height: 100svh;
-
-    background-image: url('../assets/herophone.webp');
-
-    /* Ajuste importante */
-    background-position: center top;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-    .hero-overlay {
-    margin-top: 80px;
-    padding: 30px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-
-}
-.hero-overlay {
-  background: rgba(0,0,0,0.22);
-  padding: 60px;
-  text-align: center;
-  color: white;
-  max-width: 90%;
-
-  /* NUEVO */
-  margin-top: 120px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-  max-width: 700px;
-}
-
-.btn,
-.btn-outline {
-  padding: 14px 32px;
-  text-decoration: none;
-  letter-spacing: 2px;
-  transition: 0.3s;
-}
-
-.btn {
-  background: white;
-  color: var(--black);
-}
-
-.btn-outline {
-  border: 1px solid var(--black);
-  color: var(--black);
-}
-
-.brand-section,
-.newsletter,
-.experience-login {
-  padding: 120px 0;
-}
-
-.brand-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 80px;
-  align-items: center;
-}
-
-
-.brand-grid img {
-  width: 100%;
-  height: 700px;
-  object-fit: cover;
-}
-
-@media(max-width: 768px) {
-
-  .brand-grid img {
-    height: 500px;
-  }
-
-}
-
-.subtitle {
-  letter-spacing: 4px;
-  color: var(--camel);
-}
-
-.brand-text h2 {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  font-weight: 300;
-}
-
-.brand-text p {
-  max-width: 500px;
-}
-
-.brand-second-text {
-  margin-top: 20px;
-}
-
-.brand-btn {
-  display: inline-block;
-  margin-top: 35px;
-}
-
-.newsletter {
-  background: var(--soft-gray);
-  text-align: center;
-}
-
-.newsletter h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-#newsletter-form {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-#newsletter-form input {
-  padding: 15px;
-  width: 320px;
-  border: none;
-}
-
-#newsletter-form button {
-  padding: 15px 25px;
-  border: none;
-  background: var(--black);
-  color: white;
-  cursor: pointer;
-}
-
-.experience-box {
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-}
-
-footer {
-  background: var(--black);
-  color: white;
-  padding: 60px 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-
-@media(max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    position: absolute;
-    top: 90px;
-    right: 0;
-    background: var(--light);
-    width: 100%;
-    flex-direction: column;
-    padding: 30px;
-    display: none;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .brand-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #newsletter-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #newsletter-form input {
-    width: 100%;
-  }
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-}
-
-
 /* SOBRE */
 
 .about-hero {
@@ -339,6 +29,7 @@ footer {
   text-align: left;
 
   max-width: 650px;
+  backdrop-filter: blur(2px);
 }
 
 .about-overlay h1 {
@@ -403,21 +94,139 @@ footer {
   direction: ltr;
 }
 
+/* FORMACIÓN */
+
+  .formation-list {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+  .formation-item h3 {
+
+    font-size: 1.05rem;
+
+    font-weight: 400;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .formation-item p {
+
+    opacity: 0.78;
+
+    max-width: 520px;
+  }
+
+  .formation-closing {
+
+    margin-top: 45px;
+
+    max-width: 560px;
+  }
+
+/* FORMACIÓN */
+
+.formation-list {
+  margin-top: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.formation-item h3 {
+  font-size: 1.05rem;
+
+  font-weight: 400;
+
+  margin-bottom: 8px;
+
+  letter-spacing: 1px;
+}
+
+.formation-item p {
+  opacity: 0.78;
+
+  max-width: 520px;
+}
+
+.formation-closing {
+  margin-top: 45px;
+
+  max-width: 560px;
+}
+
 @media(max-width: 768px) {
 
+  /* HERO MOBILE */
+
+  .about-hero {
+
+    background-image: url('../assets/about-mobile.png');
+
+    min-height: 100svh;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding-top: 140px;
+
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .about-overlay {
-    padding: 30px;
+
+    width: calc(100% - 40px);
+
+    max-width: 100%;
+
+    padding: 28px 24px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    backdrop-filter: blur(3px);
+
+    background: rgba(0,0,0,0.18);
   }
 
   .about-overlay h1 {
+
     font-size: 2rem;
+
+    line-height: 1.25;
+
+    margin-top: 18px;
   }
 
+  /* GRID */
+
   .about-grid {
+
     grid-template-columns: 1fr;
+
+    gap: 60px;
   }
 
   .about-grid img {
+
     height: 500px;
   }
 
@@ -425,6 +234,7 @@ footer {
   .about-philosophy,
   .about-formation,
   .about-vision {
+
     padding: 100px 0;
   }
 
