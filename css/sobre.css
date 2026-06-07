@@ -3,7 +3,7 @@
 .about-hero {
   height: 90vh;
 
-  background-image: url('../assets/about-hero2.webp');
+  background-image: url('../assets/about2.png');
   background-size: cover;
 
   /* BAJA LA IMAGEN */
@@ -172,7 +172,7 @@
 
   .about-hero {
 
-    background-image: url('../assets/about-mobile.png');
+    background-image: url('../assets/about-mobile2.png');
 
     min-height: 100svh;
 
