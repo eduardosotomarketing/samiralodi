@@ -3,7 +3,7 @@
 .login-hero {
   height: 65vh;
 
-  background-image: url('../assets/login-hero.webp');
+  background-image: url('../assets/login-hero.webp?v=1.0.1');
 
   background-size: cover;
   background-position: center;

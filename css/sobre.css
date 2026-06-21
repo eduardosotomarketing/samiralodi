@@ -3,7 +3,7 @@
 .about-hero {
   height: 90vh;
 
-  background-image: url('../assets/about2.png');
+  background-image: url('../assets/about2.webp?v=1.0.1');
   background-size: cover;
 
   /* BAJA LA IMAGEN */
@@ -166,13 +166,80 @@
   max-width: 560px;
 }
 
+/* ==========================
+   DISEÑADORA
+========================== */
+
+.designer-section{
+    padding:120px 0;
+    background:#FAFAF8;
+}
+
+.designer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 450px 1fr;
+    gap:80px;
+    align-items:center;
+    padding:0 30px;
+}
+
+.designer-image{
+    overflow:hidden;
+}
+
+.designer-image img{
+
+    width:100%;
+
+    height:650px;
+
+    object-fit:cover;
+
+    border-radius:2px;
+
+    filter:
+      saturate(.92)
+      contrast(1.03)
+      brightness(1.02);
+
+}
+
+.designer-content{
+    max-width:650px;
+}
+
+.designer-content h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:3.2rem;
+    font-weight:300;
+    color:#161212;
+    margin-bottom:30px;
+}
+
+.designer-content p{
+    font-size:1.05rem;
+    line-height:1.9;
+    color:#5b5b5b;
+    margin-bottom:20px;
+}
+
+.section-tag{
+    display:inline-block;
+    margin-bottom:20px;
+    letter-spacing:3px;
+    font-size:.75rem;
+    color:#9C8D7C;
+}
+
 @media(max-width: 768px) {
 
   /* HERO MOBILE */
 
   .about-hero {
 
-    background-image: url('../assets/about-mobile2.png');
+    background-image: url('../assets/about-mobile2.webp?v=1.0.1');
 
     min-height: 100svh;
 
@@ -237,5 +304,23 @@
 
     padding: 100px 0;
   }
+
+   .designer-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .designer-image{
+        max-width:320px;
+        margin:auto;
+    }
+
+    .designer-content{
+        text-align:center;
+    }
+
+    .designer-content h2{
+        font-size:2.4rem;
+    }
 
 }
