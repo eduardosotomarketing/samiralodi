@@ -88,7 +88,7 @@ nav a:hover {
 
 .hero{
   height: 100vh;
-  background-image: url('../assets/hero.png?v=1.0.1');
+  background-image: url('../assets/hero.webp?v=1.0.2');
   background-position: center 5%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,7 +107,7 @@ nav a:hover {
  
   .hero{
 
-    background-image: url('../assets/herophone.png');
+    background-image: url('../assets/herophone.webp?v=1.0.2');
 
     background-position: center top;
 

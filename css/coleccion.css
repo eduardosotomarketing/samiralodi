@@ -3,7 +3,7 @@
 .collection-hero {
   height: 75vh;
 
-  background-image: url('/assets/collection-hero.webp');
+  background-image: url('/assets/collection-hero.webp?v=1.0.1');
 
   background-size: cover;
   background-position: center;
