@@ -216,7 +216,7 @@
 
 @media(max-width: 768px) {
     .collection-hero {
-    background-image: url('/assets/collection-phone2.webp?v=1.0.2');
+    background-image: url('/assets/phone2.webp?v=1.0.1');
   }
 
   .collection-overlay {
