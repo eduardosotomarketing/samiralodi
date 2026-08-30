@@ -3,7 +3,7 @@
 .collection-hero {
   height: 75vh;
 
-  background-image: url('/assets/collection-hero.webp?v=1.0.1');
+  background-image: url('/assets/collection-hero.webp?v=1.0.5');
 
   background-size: cover;
   background-position: center;
@@ -215,9 +215,8 @@
 }
 
 @media(max-width: 768px) {
-
     .collection-hero {
-    background-image: url('/assets/collection-phone.webp?v=1.0.1');
+    background-image: url('/assets/phone3.webp');
   }
 
   .collection-overlay {
@@ -286,4 +285,79 @@
 
   font-weight: 400;
 }
+}
+
+.hero-text{
+    max-width: 600px;
+    margin: 24px auto 0;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: rgba(255,255,255,.9);
+    font-weight: 300;
+}
+
+.coming-soon-section{
+    padding: 140px 0;
+    background: #faf8f5;
+}
+
+.coming-soon-box{
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coming-soon-box h2{
+    margin: 18px 0 24px;
+    font-size: clamp(2rem,4vw,3.4rem);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.coming-soon-box p{
+    max-width: 560px;
+    margin: auto;
+    line-height: 1.9;
+    color: #6f6f6f;
+}
+
+.social-links-launch{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.social-links-launch a{
+    text-decoration: none;
+    color: #161212;
+    font-size: .95rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.social-links-launch a:hover{
+    opacity: .6;
+}
+
+.social-links-launch{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-links-launch a{
+    text-decoration: none;
+    color: #161212;
+    font-size: .95rem;
+    font-weight: 400;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.social-links-launch a:hover{
+    opacity: .55;
 }
