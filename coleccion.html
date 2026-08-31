@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,39 +11,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/coleccion.css?v=1.0.5">
-<link rel="stylesheet" href="css/style.css?v=1.0.5">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/coleccion.css?v=1.0.6">
+  <link rel="stylesheet" href="css/style.css?v=1.0.6">
+
+  <!-- Evita que el navegador conserve versiones antiguas -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
 </head>
 
-<script>
-
-function changeImage(element){
-
-  document.getElementById('main-image').src = element.src;
-
-  document.querySelectorAll('.thumbnail-gallery img')
-    .forEach(img => img.classList.remove('active-thumb'));
-
-  element.classList.add('active-thumb');
-}
-
-</script>
 
 <body>
 
 <div id="header"></div>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="collection-hero">
 
   <div class="collection-overlay">
 
-    <span class="subtitlecole">COLECCIÓN</span>
+    <span class="subtitlecole">
+      COLECCIÓN
+    </span>
 
     <h1>
       Líneas puras, calidad real y diseño atemporal.
@@ -51,6 +56,11 @@ function changeImage(element){
   </div>
 
 </section>
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
 
 <section class="collection-intro">
 
@@ -74,71 +84,126 @@ function changeImage(element){
 
 </section>
 
+
+<!-- =========================
+     PRODUCTO
+========================= -->
+
 <section class="product-section">
 
   <div class="container">
 
     <div class="product-grid">
 
+
+      <!-- GALERÍA -->
+
       <div class="product-gallery">
 
-  <div class="main-product-image">
+        <div class="main-product-image">
 
-    <img
-      id="main-image"
-      src="./assets/remera-main.webp"
-      alt="Remera Samira Lodi"
-    >
+          <img
+            id="main-image"
+            src="./assets/remera-main.webp"
+            alt="Remera Essential Unisex Samira Lodi"
+          >
 
-  </div>
+        </div>
 
-  <div class="thumbnail-gallery">
 
-    <img
-      src="./assets/remera-main.webp"
-      alt="Vista principal"
-      onclick="changeImage(this)"
-      class="active-thumb"
-    >
+        <div class="thumbnail-gallery">
 
-    <img
-      src="./assets/remera-fold.webp"
-      alt="Prenda doblada"
-      onclick="changeImage(this)"
-    >
+          <button
+            type="button"
+            class="thumbnail active-thumb"
+            onclick="changeImage(this)"
+          >
 
-    <img
-      src="./assets/remera-detail.webp"
-      alt="Detalle tela"
-      onclick="changeImage(this)"
-    >
+            <img
+              src="./assets/remera-main.webp"
+              alt="Vista principal de la remera"
+            >
 
-  </div>
+          </button>
 
-</div>
+
+          <button
+            type="button"
+            class="thumbnail"
+            onclick="changeImage(this)"
+          >
+
+            <img
+              src="./assets/remera-fold.webp"
+              alt="Remera doblada"
+            >
+
+          </button>
+
+
+          <button
+            type="button"
+            class="thumbnail"
+            onclick="changeImage(this)"
+          >
+
+            <img
+              src="./assets/remera-detail.webp"
+              alt="Detalle del algodón"
+            >
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMACIÓN DEL PRODUCTO -->
 
       <div class="product-info">
 
-        <span class="subtitle">PIEZA DESTACADA</span>
+        <span class="subtitle">
+          PIEZA DESTACADA
+        </span>
+
 
         <h2>
           Remera Essential Unisex
         </h2>
 
+
         <p class="product-description">
-          Remera unisex de líneas limpias y calce relajado,
-          diseñada para integrarse naturalmente a un guardarropa
-          atemporal y funcional.
+
+          Una remera de líneas limpias y calce relajado,
+          desarrollada para integrarse naturalmente a un
+          guardarropa atemporal y funcional.
+
         </p>
+
 
         <div class="product-details">
 
-          <p>• Algodón premium</p>
-          <p>• Calce relajado</p>
-          <p>• Talles reales</p>
-          <p>• Producción consciente</p>
+          <p>
+            • Algodón premium
+          </p>
+
+          <p>
+            • Calce relajado
+          </p>
+
+          <p>
+            • Diseño unisex
+          </p>
+
+          <p>
+            • Producción consciente
+          </p>
 
         </div>
+
+
+        <!-- PRECIO -->
 
         <div class="product-price">
 
@@ -146,26 +211,192 @@ function changeImage(element){
 
         </div>
 
+
+        <!-- TALLES -->
+
         <div class="size-selector">
 
-          <label>Talle</label>
+          <label for="size">
+            Seleccioná tu talle
+          </label>
 
-          <select>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
+          <select id="size">
+
+            <option value="">
+              Seleccionar talle
+            </option>
+
+            <option value="S">
+              S
+            </option>
+
+            <option value="M">
+              M
+            </option>
+
+            <option value="L">
+              L
+            </option>
+
+            <option value="XL">
+              XL
+            </option>
+
           </select>
 
         </div>
 
-        <a href="login.html" class="btn product-btn">
-          Solicitar compra
+
+        <!-- TABLA DE MEDIDAS -->
+
+        <div class="size-guide">
+
+          <h3>
+            Medidas de la prenda
+          </h3>
+
+
+          <p class="size-guide-intro">
+
+            Las medidas indicadas corresponden a las dimensiones
+            reales de la remera terminada. No corresponden a
+            medidas corporales ni a una equivalencia universal
+            de talles.
+
+          </p>
+
+
+          <div class="size-table-wrapper">
+
+            <table class="size-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Talle
+                  </th>
+
+                  <th>
+                    Ancho
+                  </th>
+
+                  <th>
+                    Largo
+                  </th>
+
+                </tr>
+
+              </thead>
+
+
+              <tbody>
+
+                <tr>
+
+                  <td>
+                    S
+                  </td>
+
+                  <td>
+                    48 cm
+                  </td>
+
+                  <td>
+                    62 cm
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>
+                    M
+                  </td>
+
+                  <td>
+                    50 cm
+                  </td>
+
+                  <td>
+                    65 cm
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>
+                    L
+                  </td>
+
+                  <td>
+                    52 cm
+                  </td>
+
+                  <td>
+                    67 cm
+                  </td>
+
+                </tr>
+
+
+                <tr>
+
+                  <td>
+                    XL
+                  </td>
+
+                  <td>
+                    54 cm
+                  </td>
+
+                  <td>
+                    69 cm
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+
+          <p class="measurement-note">
+
+            Las medidas pueden presentar pequeñas variaciones
+            propias del proceso de confección.
+
+          </p>
+
+        </div>
+
+
+        <!-- BOTÓN WHATSAPP -->
+
+        <a
+          href="#"
+          id="whatsapp-buy"
+          class="btn product-btn"
+        >
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          Comprar por WhatsApp
+
         </a>
 
+
         <p class="purchase-note">
-          Luego de iniciar sesión recibirás información
-          personalizada para completar tu compra.
+
+          Seleccioná tu talle y continuá la compra directamente
+          por WhatsApp.
+
         </p>
 
       </div>
@@ -176,22 +407,33 @@ function changeImage(element){
 
 </section>
 
+
+<!-- =========================
+     PRÓXIMAMENTE
+========================= -->
+
 <section class="future-section">
 
   <div class="container">
 
     <div class="future-box">
 
-      <span class="subtitle">PRÓXIMAMENTE</span>
+      <span class="subtitle">
+        PRÓXIMAMENTE
+      </span>
+
 
       <h2>
         La colección continuará creciendo de forma consciente.
       </h2>
 
+
       <p>
+
         Nuevas piezas serán incorporadas progresivamente,
         manteniendo siempre la identidad minimalista,
         la calidad y la coherencia visual de la marca.
+
       </p>
 
     </div>
@@ -200,11 +442,107 @@ function changeImage(element){
 
 </section>
 
+
 <div id="footer"></div>
 
-<script src="js/header.js?v=1.0.5"></script>
-<script src="js/footer.js?v=1.0.5"></script>
-<script src="js/main.js?v=1.0.5"></script>
+
+<script>
+
+  /* =========================
+     GALERÍA
+  ========================= */
+
+  function changeImage(button) {
+
+    const image = button.querySelector('img');
+
+    document.getElementById('main-image').src = image.src;
+
+    document
+      .querySelectorAll('.thumbnail')
+      .forEach(item => {
+        item.classList.remove('active-thumb');
+      });
+
+    button.classList.add('active-thumb');
+
+  }
+
+
+  /* =========================
+     WHATSAPP
+  ========================= */
+
+  const sizeSelector =
+    document.getElementById('size');
+
+  const whatsappButton =
+    document.getElementById('whatsapp-buy');
+
+
+  /*
+    REEMPLAZAR POR EL NÚMERO REAL
+    Formato internacional sin + ni espacios.
+
+    Ejemplo:
+    5493704694822
+  */
+
+  const whatsappNumber =
+    '5493704694822';
+
+
+  whatsappButton.addEventListener('click', function(event) {
+
+    event.preventDefault();
+
+
+    const selectedSize =
+      sizeSelector.value;
+
+
+    if (!selectedSize) {
+
+      alert('Por favor, seleccioná un talle antes de continuar.');
+
+      sizeSelector.focus();
+
+      return;
+
+    }
+
+
+    const product =
+      'Remera Essential Unisex';
+
+
+    const message =
+      `Hola, quiero comprar este producto:
+
+Producto: ${product}
+Talle: ${selectedSize}
+
+Quisiera recibir información para completar la compra.`;
+
+
+    const whatsappURL =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
+    window.open(
+      whatsappURL,
+      '_blank'
+    );
+
+  });
+
+</script>
+
+
+<script src="js/header.js?v=1.0.6"></script>
+<script src="js/footer.js?v=1.0.6"></script>
+<script src="js/main.js?v=1.0.6"></script>
 
 </body>
+
 </html>

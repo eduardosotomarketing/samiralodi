@@ -10,7 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Iniciar sesión | Samira Lodi</title>
+  <title>Crear cuenta | Samira Lodi</title>
 
 
   <link
@@ -20,7 +20,7 @@
 
   <link
     rel="preconnect"
-    href="https://fonts.gstatic.com"
+    href="https://fonts.googleapis.com"
     crossorigin
   >
 
@@ -28,12 +28,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet"
-  >
-
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   >
 
 
@@ -71,28 +65,66 @@
 
 
       <h1>
-        Bienvenida.
+        Crear cuenta.
       </h1>
 
 
       <p class="login-intro">
-        Ingresá para acceder a futuras colecciones,
-        novedades y una experiencia personalizada.
+        Formá parte de la experiencia Samira Lodi
+        y recibí novedades antes que nadie.
       </p>
 
 
-      <form id="login-form">
+      <form id="register-form">
+
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label for="register-nombre">
+              Nombre
+            </label>
+
+            <input
+              type="text"
+              id="register-nombre"
+              placeholder="Tu nombre"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="register-apellido">
+              Apellido
+            </label>
+
+            <input
+              type="text"
+              id="register-apellido"
+              placeholder="Tu apellido"
+              required
+            >
+
+          </div>
+
+
+        </div>
 
 
         <div class="form-group">
 
-          <label for="login-email">
+          <label for="register-email">
             Email
           </label>
 
           <input
             type="email"
-            id="login-email"
+            id="register-email"
             placeholder="Tu email"
             autocomplete="email"
             required
@@ -103,15 +135,33 @@
 
         <div class="form-group">
 
-          <label for="login-password">
+          <label for="register-password">
             Contraseña
           </label>
 
           <input
             type="password"
-            id="login-password"
-            placeholder="Tu contraseña"
-            autocomplete="current-password"
+            id="register-password"
+            placeholder="Mínimo 6 caracteres"
+            autocomplete="new-password"
+            minlength="6"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="register-password-confirm">
+            Repetir contraseña
+          </label>
+
+          <input
+            type="password"
+            id="register-password-confirm"
+            placeholder="Repetí tu contraseña"
+            autocomplete="new-password"
             required
           >
 
@@ -122,12 +172,12 @@
           type="submit"
           class="btn login-button"
         >
-          Iniciar sesión
+          Crear cuenta
         </button>
 
 
         <p
-          id="login-message"
+          id="register-message"
           class="form-message"
         ></p>
 
@@ -137,12 +187,8 @@
 
       <div class="login-links">
 
-        <a href="registro.html">
-          Crear una cuenta
-        </a>
-
-        <a href="recuperar.html">
-          ¿Olvidaste tu contraseña?
+        <a href="login.html">
+          Ya tengo una cuenta
         </a>
 
       </div>

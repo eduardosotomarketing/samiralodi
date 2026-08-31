@@ -10,7 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Iniciar sesión | Samira Lodi</title>
+  <title>Recuperar contraseña | Samira Lodi</title>
 
 
   <link
@@ -28,12 +28,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet"
-  >
-
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   >
 
 
@@ -71,47 +65,31 @@
 
 
       <h1>
-        Bienvenida.
+        Recuperar acceso.
       </h1>
 
 
       <p class="login-intro">
-        Ingresá para acceder a futuras colecciones,
-        novedades y una experiencia personalizada.
+        Ingresá tu email y te enviaremos
+        las instrucciones para restablecer
+        tu contraseña.
       </p>
 
 
-      <form id="login-form">
+      <form id="reset-form">
 
 
         <div class="form-group">
 
-          <label for="login-email">
+          <label for="reset-email">
             Email
           </label>
 
           <input
             type="email"
-            id="login-email"
+            id="reset-email"
             placeholder="Tu email"
             autocomplete="email"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="login-password">
-            Contraseña
-          </label>
-
-          <input
-            type="password"
-            id="login-password"
-            placeholder="Tu contraseña"
-            autocomplete="current-password"
             required
           >
 
@@ -122,12 +100,12 @@
           type="submit"
           class="btn login-button"
         >
-          Iniciar sesión
+          Enviar instrucciones
         </button>
 
 
         <p
-          id="login-message"
+          id="reset-message"
           class="form-message"
         ></p>
 
@@ -137,12 +115,8 @@
 
       <div class="login-links">
 
-        <a href="registro.html">
-          Crear una cuenta
-        </a>
-
-        <a href="recuperar.html">
-          ¿Olvidaste tu contraseña?
+        <a href="login.html">
+          Volver a iniciar sesión
         </a>
 
       </div>

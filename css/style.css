@@ -102,9 +102,23 @@ nav a:hover {
 }
 
 /* Imagen mobile */
+
+
 @media(max-width: 768px) {
 
- 
+ .hero-overlay {
+  padding: 25px 24px;
+
+  background: rgba(22, 18, 18, 0.30);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
   .hero{
 
     background-image: url('../assets/herophone.webp?v=1.0.2');
@@ -134,20 +148,31 @@ nav a:hover {
   }
 
 }
-.hero-overlay {
- background: transparent;
 
+.hero-overlay {
   color: white;
 
   max-width: 700px;
 
   margin-left: 8%;
-
   margin-top: 40px;
 
   text-align: left;
 
-  padding: 0;
+  padding: 32px 38px;
+
+  /* Fondo translúcido para mejorar el contraste */
+  background: rgba(22, 18, 18, 0.32);
+
+  /* Efecto vidrio sutil */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* Borde casi imperceptible */
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  /* Sombra muy suave */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .hero h1 {
@@ -390,4 +415,95 @@ footer {
     gap: 20px;
     text-align: center;
   }
+}
+
+/* ==========================================
+   CUENTA EN HEADER
+========================================== */
+
+.header-account {
+  margin-left: 10px;
+}
+
+
+.header-login,
+.header-user a {
+
+  text-decoration: none;
+
+  color: var(--black);
+
+  font-size: 0.85rem;
+
+}
+
+
+.header-user {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+}
+
+
+.header-user button {
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-family: 'Josefin Sans', sans-serif;
+
+  font-size: 0.8rem;
+
+  color: var(--camel);
+
+  padding: 0;
+
+}
+
+
+.header-user button:hover {
+
+  opacity: 0.6;
+
+}
+
+
+@media(max-width: 768px) {
+
+  .header-account {
+
+    margin-left: 0;
+
+  }
+
+
+  .header-user {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+  }
+
+}
+
+.newsletter-note {
+
+  margin-top: 18px;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 0.5px;
+
+  opacity: 0.65;
+
 }
