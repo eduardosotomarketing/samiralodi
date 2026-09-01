@@ -11,18 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/contacto.css?v=1.0.5">
-  <link rel="stylesheet" href="css/style.css?v=1.0.5">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/contacto.css?v=1.0.6">
+  <link rel="stylesheet" href="css/style.css?v=1.0.6">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
 </head>
 
 <body>
 
 <div id="header"></div>
+
+
+<!-- HERO -->
 
 <section class="contact-hero">
 
@@ -38,11 +45,17 @@
 
 </section>
 
+
+<!-- CONTACTO -->
+
 <section class="contact-section">
 
   <div class="container">
 
     <div class="contact-grid">
+
+
+      <!-- INFORMACIÓN -->
 
       <div class="contact-info">
 
@@ -59,14 +72,18 @@
           directamente desde este espacio.
         </p>
 
+
         <div class="contact-links">
 
-          <a href="https://instagram.com/samira_lodi/
-          " target="_blank">
+          <a href="https://instagram.com/samira_lodi/"
+             target="_blank"
+             rel="noopener noreferrer">
             Instagram
           </a>
 
-          <a href="https://wa.me/5493704694822" target="_blank">
+          <a href="https://wa.me/5493704694822"
+             target="_blank"
+             rel="noopener noreferrer">
             WhatsApp
           </a>
 
@@ -74,23 +91,32 @@
 
       </div>
 
+
+      <!-- FORMULARIO -->
+
       <div class="contact-form-box">
 
         <form id="contact-form">
 
           <input
             type="text"
+            id="nombre"
             placeholder="Nombre"
+            autocomplete="name"
             required
           >
 
           <input
-            type="email"
-            placeholder="Email"
+            type="tel"
+            id="celular"
+            placeholder="Celular"
+            autocomplete="tel"
+            inputmode="tel"
             required
           >
 
           <textarea
+            id="mensaje"
             placeholder="Mensaje"
             rows="6"
             required
@@ -110,6 +136,9 @@
 
 </section>
 
+
+<!-- FRASE -->
+
 <section class="contact-quote">
 
   <div class="container">
@@ -122,11 +151,47 @@
 
 </section>
 
+
 <div id="footer"></div>
 
-<script src="js/header.js?v=1.0.5"></script>
-<script src="js/footer.js?v=1.0.5"></script>
-<script src="js/main.js?v=1.0.5"></script>
+
+<script src="js/header.js?v=1.0.6"></script>
+<script src="js/footer.js?v=1.0.6"></script>
+<script src="js/main.js?v=1.0.6"></script>
+
+
+<!-- WHATSAPP -->
+
+<script>
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const nombre = document.getElementById("nombre").value.trim();
+  const celular = document.getElementById("celular").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  const numeroWhatsApp = "5493704694822";
+
+  const texto =
+`Hola, Samira Lodi.
+
+Mi nombre es: ${nombre}
+Mi celular es: ${celular}
+
+Consulta:
+${mensaje}`;
+
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+
+});
+
+</script>
+
 
 </body>
 </html>
+
