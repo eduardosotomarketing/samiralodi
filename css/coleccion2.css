@@ -3,7 +3,7 @@
 .collection-hero {
   height: 75vh;
 
-  background-image: url('/assets/collection-hero.webp?v=1.0.5');
+  background-image: url('/assets/collection-hero.webp?v=1.0.8');
 
   background-size: cover;
   background-position: center;
@@ -217,7 +217,7 @@
 @media(max-width: 768px) {
 
     .collection-hero {
-    background-image: url('/assets/collection-phone.webp?v=1.0.5');
+    background-image: url('/assets/collection-phone.webp?v=1.0.8');
   }
 
   .collection-overlay {
